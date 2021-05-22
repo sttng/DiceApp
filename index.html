@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+
+<script src="https://randojs.com/2.0.0.js"></script>
+
+<body>
+<header class="w3-container w3-card w3-theme">
+  <h1>Roll the Dice</h1>
+</header>
+
+<div class="w3-container">
+<hr>
+<div class="w3-cell-row">
+  <div class="w3-cell w3-container">
+    <h3>Start Number</h3>
+    <input type="number" id="num_start" name="num_start" min="0" value="1">
+  </div>
+</div>  
+<hr>
+<div class="w3-cell-row">
+  <div class="w3-cell w3-container">
+    <h3>End Number</h3>
+    <input type="number" id="num_end" name="num_end" min="0" value="6">
+  </div>
+</div>
+<hr>
+<div class="w3-cell-row">
+  <div class="w3-cell w3-container">
+    <h2 id="myHeader">Result</h2>
+    <p><button class="w3-button  w3-block w3-green" onclick="rollDice()">Roll it</button></p>
+  </div>
+</div>
+<hr>
+</div>
+
+<script type="text/javascript">
+function rollDice() {
+  var min_val = parseInt(document.getElementById('num_start').value);
+  var max_val = parseInt(document.getElementById('num_end').value);
+  myHeader.innerText = rando(min_val, max_val);
+}
+</script>
+
+</body>
