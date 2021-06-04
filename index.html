@@ -43,7 +43,8 @@ function rollDice() {
   var min_val = parseInt(document.getElementById('num_start').value);
   var max_val = parseInt(document.getElementById('num_end').value);
   //myHeader.innerText = rando(min_val, max_val);
-  myHeader.randoSequence = rando(min_val, max_val);
+  var randArr = randoSequence(min_val, max_val);
+  myHeader.innerText = randArr[0];
   counter++;
   console.log(counter);
 }
