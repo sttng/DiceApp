@@ -38,10 +38,14 @@
 </div>
 
 <script type="text/javascript">
+var counter = 0;
 function rollDice() {
   var min_val = parseInt(document.getElementById('num_start').value);
   var max_val = parseInt(document.getElementById('num_end').value);
-  myHeader.innerText = rando(min_val, max_val);
+  //myHeader.innerText = rando(min_val, max_val);
+  myHeader.randoSequence = rando(min_val, max_val);
+  counter++;
+  console.log(counter);
 }
 </script>
 
