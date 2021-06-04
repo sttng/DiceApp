@@ -50,7 +50,8 @@ function rollDice() {
   }
   if (max_val >= randArr.length) {
     randArr = randoSequence(min_val, max_val);
-        console.log("Changed");
+    counter = 0;
+    console.log("Changed");
   }
   if (counter >= max_val) {
     randArr = randoSequence(min_val, max_val);
