@@ -49,16 +49,16 @@ function rollDice() {
      counter++;
   }
   if (counter >= max_val) {
+    randArr = randoSequence(min_val, max_val);
     console.log("Greater");
     counter = 0;
   } 
   else {
     console.log("Else");
   }
-  randArr = randoSequence(min_val, max_val);
-  myHeader.innerText = randArr;
+  myHeader.innerText = randArr[counter];
   counter++;
-  console.log(counter);
+  console.log(randArr);
 }
 </script>
 
