@@ -45,12 +45,13 @@ var old_max_val = -1;
 function rollDice() {
   var min_val = parseInt(document.getElementById('num_start').value);
   var max_val = parseInt(document.getElementById('num_end').value);
-  //myHeader.innerText = rando(min_val, max_val);
+
   if (max_val != old_max_val || min_val != old_min_val) {
     randArr = randoSequence(min_val, max_val);
     counter = 0;
     console.log("Changed");
   }
+  
   if (counter >= max_val) {
     randArr = randoSequence(min_val, max_val);
     counter = 0;
@@ -59,6 +60,7 @@ function rollDice() {
   else {
     console.log("Else");
   }
+  
   myHeader.innerText = randArr[counter];
   counter++;
   old_min_val = min_val;
