@@ -48,7 +48,7 @@ function rollDice() {
      randArr = randoSequence(min_val, max_val);
      counter++;
   }
-  if (max_val >= randArr.length) {
+  if (max_val >= randArr.length + 1) {
     randArr = randoSequence(min_val, max_val);
     counter = 0;
     console.log("Changed");
