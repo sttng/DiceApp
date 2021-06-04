@@ -38,13 +38,16 @@
 </div>
 
 <script type="text/javascript">
-var counter = 0;
-var randArr = randoSequence(min_val, max_val);
-  
+var counter = -1;
+ 
 function rollDice() {
   var min_val = parseInt(document.getElementById('num_start').value);
   var max_val = parseInt(document.getElementById('num_end').value);
   //myHeader.innerText = rando(min_val, max_val);
+  if (counter == -1) {
+     randArr = randoSequence(min_val, max_val);
+     counter++;
+  }
   if (counter >= max_val) {
     console.log("Greater");
     counter = 0;
