@@ -39,12 +39,21 @@
 
 <script type="text/javascript">
 var counter = 0;
+var randArr = randoSequence(min_val, max_val);
+  
 function rollDice() {
   var min_val = parseInt(document.getElementById('num_start').value);
   var max_val = parseInt(document.getElementById('num_end').value);
   //myHeader.innerText = rando(min_val, max_val);
-  var randArr = randoSequence(min_val, max_val);
-  myHeader.innerText = randArr[0];
+  if (counter >= max_val) {
+    console.log("Greater");
+    counter = 0;
+  } 
+  else {
+    console.log("Else");
+  }
+  randArr = randoSequence(min_val, max_val);
+  myHeader.innerText = randArr;
   counter++;
   console.log(counter);
 }
